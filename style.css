@@ -784,7 +784,7 @@ button {
 
 .attendance-action {
 	display: flex;
-	min-width: 260px;
+	min-width: 356px;
 	flex-direction: column;
 	align-items: stretch;
 	gap: 13px;
@@ -800,6 +800,41 @@ button {
 
 .attendance-action > span svg {
 	width: 14px;
+}
+
+.attendance-qr-list {
+	display: grid;
+	grid-template-columns: repeat(2, minmax(0, 170px));
+	gap: 16px;
+}
+
+.attendance-qr-item {
+	display: flex;
+	flex-direction: column;
+	gap: 8px;
+}
+
+.attendance-qr-item > strong {
+	color: #d0ddd7;
+	font-size: 11px;
+	font-weight: 600;
+}
+
+.attendance-qr {
+	width: 100%;
+	padding: 10px;
+	background: var(--white);
+}
+
+.attendance-qr img {
+	display: block;
+	width: 100%;
+	height: auto;
+}
+
+.whatsapp-qr {
+	padding: 0;
+	background: transparent;
 }
 
 .button-accent {
@@ -1209,6 +1244,10 @@ button {
 
 	.attendance-action,
 	.attendance-action .button {
+		width: 100%;
+	}
+
+	.attendance-qr {
 		width: 100%;
 	}
 

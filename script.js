@@ -1,6 +1,6 @@
 const portalConfig = {
 	sharePointUrl: "",
-	attendanceFormUrl: "",
+	attendanceFormUrl: "https://forms.cloud.microsoft/r/vt5bZf8h5N",
 };
 
 const menuButton = document.querySelector(".menu-button");
