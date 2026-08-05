@@ -846,6 +846,46 @@ button {
 	background: #fa7d60;
 }
 
+.profile-survey {
+	padding-bottom: 105px;
+}
+
+.profile-survey-panel {
+	display: grid;
+	grid-template-columns: minmax(0, 1fr) 210px;
+	align-items: center;
+	gap: 60px;
+	padding: 48px 62px;
+	border: 1px solid var(--line);
+	background: #edf6f5;
+}
+
+.profile-survey-panel > div {
+	max-width: 690px;
+}
+
+.profile-survey-panel h2 {
+	max-width: 680px;
+	font-size: clamp(34px, 4vw, 50px);
+}
+
+.profile-survey-panel p:not(.section-label) {
+	max-width: 610px;
+	margin: 16px 0 26px;
+	color: var(--muted);
+}
+
+.profile-survey-qr {
+	display: block;
+	width: 210px;
+}
+
+.profile-survey-qr img {
+	display: block;
+	width: 100%;
+	height: auto;
+}
+
 .notices {
 	padding-bottom: 115px;
 }
@@ -1073,6 +1113,10 @@ button {
 		align-items: start;
 	}
 
+	.profile-survey-panel {
+		grid-template-columns: 1fr;
+	}
+
 	.attendance-action {
 		min-width: 0;
 		align-items: flex-start;
@@ -1240,6 +1284,15 @@ button {
 	.attendance-panel {
 		gap: 35px;
 		padding: 42px 26px;
+	}
+
+	.profile-survey-panel {
+		gap: 32px;
+		padding: 38px 26px;
+	}
+
+	.profile-survey-qr {
+		width: min(210px, 100%);
 	}
 
 	.attendance-action,
