@@ -867,6 +867,56 @@ button {
 	height: auto;
 }
 
+.institution-link {
+	padding-bottom: 105px;
+}
+
+.institution-link-panel {
+	display: grid;
+	grid-template-columns: minmax(0, 1fr) 160px;
+	align-items: center;
+	gap: 60px;
+	padding: 48px 62px;
+	border: 1px solid var(--line);
+}
+
+.instagram-panel {
+	background: #f8eef2;
+}
+
+.website-panel {
+	background: #eef3f8;
+}
+
+.institution-link-panel > div {
+	max-width: 690px;
+}
+
+.institution-link-panel h2 {
+	max-width: 680px;
+	font-size: clamp(34px, 4vw, 50px);
+}
+
+.institution-link-panel p:not(.section-label) {
+	max-width: 610px;
+	margin: 16px 0 26px;
+	color: var(--muted);
+}
+
+.institution-link-icon {
+	display: grid;
+	width: 160px;
+	aspect-ratio: 1;
+	place-items: center;
+	color: var(--white);
+	background: var(--forest);
+}
+
+.institution-link-icon svg {
+	width: 58px;
+	height: 58px;
+}
+
 .notices {
 	padding-bottom: 115px;
 }
@@ -1098,6 +1148,10 @@ button {
 		grid-template-columns: 1fr;
 	}
 
+	.institution-link-panel {
+		grid-template-columns: 1fr;
+	}
+
 	.attendance-action {
 		min-width: 0;
 		align-items: flex-start;
@@ -1274,6 +1328,15 @@ button {
 
 	.profile-survey-qr {
 		width: min(210px, 100%);
+	}
+
+	.institution-link-panel {
+		gap: 32px;
+		padding: 38px 26px;
+	}
+
+	.institution-link-icon {
+		width: min(160px, 100%);
 	}
 
 	.attendance-action,
