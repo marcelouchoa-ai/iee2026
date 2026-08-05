@@ -1,5 +1,5 @@
 const portalConfig = {
-	sharePointUrl: "",
+	sharePointUrl: "https://1drv.ms/f/c/3282d669f30858d3/IgDUBJ4VzOMLRafmyD4hAoNGAXFSXx2faeFy2AFceMdV1x8?e=LON9uh",
 	attendanceFormUrl: "https://forms.cloud.microsoft/r/vt5bZf8h5N",
 };
 
