@@ -869,6 +869,7 @@ button {
 }
 
 .website-panel {
+	grid-template-columns: minmax(0, 1fr) 220px;
 	background: #eef3f8;
 }
 
@@ -899,6 +900,18 @@ button {
 .institution-link-icon svg {
 	width: 58px;
 	height: 58px;
+}
+
+.institution-link-logo {
+	width: 220px;
+	aspect-ratio: auto;
+	padding: 22px;
+	background: var(--white);
+}
+
+.institution-link-logo img {
+	width: 100%;
+	height: auto;
 }
 
 .notices {
@@ -1304,6 +1317,10 @@ button {
 
 	.institution-link-icon {
 		width: min(160px, 100%);
+	}
+
+	.institution-link-logo {
+		width: min(220px, 100%);
 	}
 
 	.attendance-action,
