@@ -790,18 +790,6 @@ button {
 	gap: 13px;
 }
 
-.attendance-action > span {
-	display: flex;
-	align-items: center;
-	gap: 7px;
-	color: #d0ddd7;
-	font-size: 10px;
-}
-
-.attendance-action > span svg {
-	width: 14px;
-}
-
 .attendance-qr {
 	width: 170px;
 	padding: 10px;
