@@ -83,6 +83,26 @@ function updateCalendarInvite() {
 	document.querySelector("[data-calendar-invite]").href = inviteUrl.toString();
 }
 
+function updateNotices() {
+	const board = document.querySelector("[data-notice-board]");
+	const noticeDateFormat = new Intl.DateTimeFormat("pt-BR", { day: "2-digit", month: "long", year: "numeric" });
+	const notices = Array.from(board.children)
+		.sort((a, b) => b.dataset.noticeDate.localeCompare(a.dataset.noticeDate));
+
+	notices.forEach((notice, index) => {
+		const isCurrent = index === 0;
+		const [year, month, day] = notice.dataset.noticeDate.split("-").map(Number);
+		const time = notice.querySelector("[data-notice-time]");
+
+		notice.classList.toggle("is-current", isCurrent);
+		notice.querySelector("[data-notice-tag]").textContent = isCurrent ? "Aviso da semana" : "Arquivo";
+		time.dateTime = notice.dataset.noticeDate;
+		time.textContent = noticeDateFormat.format(new Date(year, month - 1, day));
+	});
+
+	board.replaceChildren(...notices);
+}
+
 function showToast(message) {
 	window.clearTimeout(toastTimer);
 	toast.textContent = message;
@@ -157,6 +177,7 @@ configureExternalLink(
 updateNextMeeting();
 updateCalendar();
 updateCalendarInvite();
+updateNotices();
 window.setInterval(() => {
 	updateNextMeeting();
 	updateCalendar();
