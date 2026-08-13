@@ -8,6 +8,28 @@ const mainNav = document.querySelector(".main-nav");
 const toast = document.querySelector(".toast");
 let toastTimer;
 
+function getNextMeetingDate(now = new Date()) {
+	const nextMeeting = new Date(now);
+	const daysUntilThursday = (4 - now.getDay() + 7) % 7;
+	const hasThursdayMeetingEnded = daysUntilThursday === 0
+		&& (now.getHours() > 21 || (now.getHours() === 21 && now.getMinutes() >= 30));
+
+	nextMeeting.setDate(now.getDate() + daysUntilThursday + (hasThursdayMeetingEnded ? 7 : 0));
+	nextMeeting.setHours(0, 0, 0, 0);
+	return nextMeeting;
+}
+
+function updateNextMeeting() {
+	const dateElement = document.querySelector("[data-next-meeting-date]");
+	const nextMeeting = getNextMeetingDate();
+	const shortDate = new Intl.DateTimeFormat("pt-BR", {
+		day: "2-digit",
+		month: "short",
+	}).format(nextMeeting).replace(" de ", " ").replace(".", "").toUpperCase();
+
+	dateElement.textContent = shortDate;
+}
+
 function showToast(message) {
 	window.clearTimeout(toastTimer);
 	toast.textContent = message;
@@ -79,5 +101,7 @@ configureExternalLink(
 	"O formulário de presença abre no início de cada encontro."
 );
 
+updateNextMeeting();
+window.setInterval(updateNextMeeting, 30_000);
 document.querySelector("#current-year").textContent = new Date().getFullYear();
 window.lucide?.createIcons();
