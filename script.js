@@ -83,6 +83,13 @@ function updateCalendarInvite() {
 	document.querySelector("[data-calendar-invite]").href = inviteUrl.toString();
 }
 
+// O rótulo de cada aula segue a publicação do material: basta o módulo virar link para liberar o conteúdo.
+function updateModuleStatus() {
+	document.querySelectorAll(".module .status").forEach((statusElement) => {
+		statusElement.textContent = statusElement.href ? "Conteúdo" : "Em breve";
+	});
+}
+
 function updateNotices() {
 	const board = document.querySelector("[data-notice-board]");
 	const noticeDateFormat = new Intl.DateTimeFormat("pt-BR", { day: "2-digit", month: "long", year: "numeric" });
@@ -177,6 +184,7 @@ configureExternalLink(
 updateNextMeeting();
 updateCalendar();
 updateCalendarInvite();
+updateModuleStatus();
 updateNotices();
 window.setInterval(() => {
 	updateNextMeeting();
