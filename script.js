@@ -90,6 +90,15 @@ function updateModuleStatus() {
 	});
 }
 
+function updateActiveModule(now = new Date()) {
+	const modules = Array.from(document.querySelectorAll("[data-module-date]"));
+	const today = new Date(now.getFullYear(), now.getMonth(), now.getDate());
+	const alreadyHeld = modules.filter((module) => new Date(`${module.dataset.moduleDate}T00:00:00`) <= today);
+	const focused = alreadyHeld.at(-1) ?? modules[0];
+
+	modules.forEach((module) => module.classList.toggle("active", module === focused));
+}
+
 function updateNotices() {
 	const board = document.querySelector("[data-notice-board]");
 	const noticeDateFormat = new Intl.DateTimeFormat("pt-BR", { day: "2-digit", month: "long", year: "numeric" });
@@ -185,11 +194,13 @@ updateNextMeeting();
 updateCalendar();
 updateCalendarInvite();
 updateModuleStatus();
+updateActiveModule();
 updateNotices();
 window.setInterval(() => {
 	updateNextMeeting();
 	updateCalendar();
 	updateCalendarInvite();
+	updateActiveModule();
 }, 30_000);
 document.querySelector("#current-year").textContent = new Date().getFullYear();
 window.lucide?.createIcons();
