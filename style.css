@@ -537,83 +537,54 @@ button {
 	background: var(--gold);
 }
 
-.calendar-card {
-	padding: 35px 40px 28px;
-	color: var(--ink);
-	background: var(--white);
+.agenda-visual {
+	position: relative;
+	min-height: 410px;
+	margin: 0;
+	overflow: hidden;
+	background: #d8d2c5;
+	box-shadow: 0 24px 60px rgba(5, 20, 16, 0.28);
 }
 
-.calendar-top {
+.agenda-visual::after {
+	position: absolute;
+	inset: 0;
+	background: linear-gradient(180deg, transparent 52%, rgba(10, 28, 23, 0.72));
+	content: "";
+}
+
+.agenda-visual img {
+	display: block;
+	width: 100%;
+	height: 100%;
+	min-height: 410px;
+	object-fit: cover;
+	object-position: center;
+}
+
+.agenda-visual figcaption {
+	position: absolute;
+	z-index: 1;
+	right: 28px;
+	bottom: 26px;
+	left: 28px;
 	display: flex;
-	align-items: baseline;
+	align-items: end;
 	justify-content: space-between;
-	padding-bottom: 20px;
-	border-bottom: 1px solid var(--line);
-}
-
-.calendar-top span {
-	font-family: var(--serif);
-	font-size: 30px;
-	font-weight: 600;
-}
-
-.calendar-top strong {
-	color: var(--muted);
-	font-size: 13px;
-}
-
-.weekdays,
-.days {
-	display: grid;
-	grid-template-columns: repeat(7, 1fr);
-	text-align: center;
-}
-
-.weekdays {
-	padding: 17px 0 9px;
-	color: #929a96;
-	font-size: 10px;
-	font-weight: 700;
-}
-
-.days span {
-	display: grid;
-	aspect-ratio: 1.4;
-	place-items: center;
-	font-size: 13px;
-}
-
-.days .muted {
-	color: #c8ccc9;
-}
-
-.days .meeting-day {
-	width: 36px;
-	aspect-ratio: 1;
-	justify-self: center;
+	gap: 20px;
 	color: var(--white);
-	background: var(--accent);
-	border-radius: 50%;
-	font-weight: 700;
 }
 
-.calendar-legend {
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	gap: 8px;
-	margin-top: 16px;
-	padding-top: 18px;
-	border-top: 1px solid var(--line);
-	color: var(--muted);
+.agenda-visual figcaption span {
 	font-size: 11px;
+	font-weight: 700;
+	text-transform: uppercase;
 }
 
-.calendar-legend span {
-	width: 8px;
-	height: 8px;
-	background: var(--accent);
-	border-radius: 50%;
+.agenda-visual figcaption strong {
+	font-family: var(--serif);
+	font-size: 28px;
+	font-weight: 600;
 }
 
 .resources {
@@ -1250,17 +1221,22 @@ button {
 		padding: 72px 0;
 	}
 
-	.calendar-card {
-		padding: 26px 17px 22px;
+	.agenda-visual,
+	.agenda-visual img {
+		min-height: 330px;
 	}
 
-	.days span {
-		aspect-ratio: 1.1;
-		font-size: 12px;
+	.agenda-visual figcaption {
+		right: 20px;
+		bottom: 20px;
+		left: 20px;
+		align-items: start;
+		flex-direction: column;
+		gap: 6px;
 	}
 
-	.days .meeting-day {
-		width: 31px;
+	.agenda-visual figcaption strong {
+		font-size: 24px;
 	}
 
 	.resource-tabs {

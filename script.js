@@ -30,37 +30,6 @@ function updateNextMeeting() {
 	dateElement.textContent = shortDate;
 }
 
-// O calendário exibe o mês corrente em uma grade fixa de 6 semanas iniciadas no domingo.
-const calendarWeeks = 6;
-const thursday = 4;
-
-function updateCalendar(now = new Date()) {
-	const daysGrid = document.querySelector("[data-calendar-days]");
-	const monthName = new Intl.DateTimeFormat("pt-BR", { month: "long" }).format(now);
-	const year = now.getFullYear();
-
-	document.querySelector("[data-calendar-month]").textContent = monthName.charAt(0).toUpperCase() + monthName.slice(1);
-	document.querySelector("[data-calendar-year]").textContent = String(year);
-	daysGrid.setAttribute("aria-label", `Calendário de ${monthName} de ${year}`);
-
-	const firstOfMonth = new Date(year, now.getMonth(), 1);
-	const gridStart = new Date(year, now.getMonth(), 1 - firstOfMonth.getDay());
-
-	daysGrid.replaceChildren(...Array.from({ length: calendarWeeks * 7 }, (_, index) => {
-		const date = new Date(gridStart.getFullYear(), gridStart.getMonth(), gridStart.getDate() + index);
-		const isCurrentMonth = date.getMonth() === now.getMonth() && date.getFullYear() === year;
-		const cell = document.createElement("span");
-
-		cell.textContent = String(date.getDate());
-		cell.classList.toggle("muted", !isCurrentMonth);
-		cell.classList.toggle(
-			"meeting-day",
-			isCurrentMonth && date.getDay() === thursday && date.getDate() <= now.getDate()
-		);
-		return cell;
-	}));
-}
-
 function updateCalendarInvite() {
 	const nextMeeting = getNextMeetingDate();
 	const start = new Date(nextMeeting);
@@ -191,14 +160,12 @@ configureExternalLink(
 );
 
 updateNextMeeting();
-updateCalendar();
 updateCalendarInvite();
 updateModuleStatus();
 updateActiveModule();
 updateNotices();
 window.setInterval(() => {
 	updateNextMeeting();
-	updateCalendar();
 	updateCalendarInvite();
 	updateActiveModule();
 }, 30_000);
