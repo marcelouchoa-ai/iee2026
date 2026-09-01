@@ -59,6 +59,26 @@ function updateModuleStatus() {
 	});
 }
 
+function sortPlansByMostRecent() {
+	const plans = Array.from(document.querySelectorAll(".plan"));
+	const insertionPoint = plans.at(-1)?.nextElementSibling;
+
+	plans.sort((a, b) => {
+		const latestDate = (plan) => Array.from(plan.querySelectorAll("[data-module-date]"))
+			.map((module) => module.dataset.moduleDate)
+			.sort()
+			.at(-1) ?? "";
+
+		return latestDate(b).localeCompare(latestDate(a));
+	});
+
+	plans.forEach((plan) => plan.parentElement.insertBefore(plan, insertionPoint));
+	plans.forEach((plan) => {
+		if (plan.id === "plano") plan.removeAttribute("id");
+	});
+	if (plans[0]) plans[0].id = "plano";
+}
+
 function updateActiveModule(now = new Date()) {
 	const modules = Array.from(document.querySelectorAll("[data-module-date]"));
 	const today = new Date(now.getFullYear(), now.getMonth(), now.getDate());
@@ -162,6 +182,7 @@ configureExternalLink(
 updateNextMeeting();
 updateCalendarInvite();
 updateModuleStatus();
+sortPlansByMostRecent();
 updateActiveModule();
 updateNotices();
 window.setInterval(() => {

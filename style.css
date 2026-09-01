@@ -646,6 +646,10 @@ button {
 	background: var(--forest-light);
 }
 
+.file-icon.lesson-plan {
+	background: var(--accent);
+}
+
 .file-icon.exercise {
 	background: var(--accent);
 }
