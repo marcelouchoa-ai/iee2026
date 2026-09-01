@@ -1004,6 +1004,11 @@ button {
 	font-size: 10px;
 }
 
+.build-version {
+	color: var(--white);
+	font-weight: 700;
+}
+
 .toast {
 	position: fixed;
 	z-index: 80;
