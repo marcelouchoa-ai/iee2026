@@ -34,8 +34,8 @@ function updateCalendarInvite() {
 	const nextMeeting = getNextMeetingDate();
 	const start = new Date(nextMeeting);
 	const end = new Date(nextMeeting);
-	start.setHours(20, 0, 0, 0);
-	end.setHours(22, 0, 0, 0);
+	start.setHours(19, 30, 0, 0);
+	end.setHours(21, 30, 0, 0);
 
 	// O Outlook interpreta a data sem fuso como horário local de quem abre o convite.
 	const asLocalDateTime = (date) => {
