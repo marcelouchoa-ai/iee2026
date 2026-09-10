@@ -10,7 +10,7 @@ data	 aula 	  Conteúdo Programático 			Bibliografia Específica de Referência
 MÓDULO 2: O ESPIRITISMO, O UNIVERSO, DEUS, A CRIAÇÃO, PRINCÍPIO VITAL				
 data	 aula 	  Conteúdo Programático 		
 3-set.	5	4 - Espiritismo ou Doutrina Espírita: Conceito, Objeto - Tríplice Aspecto - Princípios Básicos da DE		
-10-set.	6 	5 - Existência de Deus e Provas de Sua Existência - Atributos da Divindade - A Providência Divina - Panteismo		
+10-set.	6 	5 - Existência de Deus e Provas de Sua Existência - Atributos da Divindade - A Providência Divina - Panteísmo		
 17-set.	7 	6 - Elementos Gerais do Universo:  O Princípio das Coisas - Espírito e Matéria - Propriedades da Matéria - Espaço Universal		
 24-set.	8 	7 - Formação dos Mundos e dos Seres - Povoamento da Terra		
 1-out.	9 	8 - Princípio Vital:  Seres Orgânicos e Inorgânicos - A Vida e a Morte - Inteligência e Instinto		
