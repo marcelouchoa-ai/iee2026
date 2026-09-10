@@ -911,6 +911,10 @@ button {
 	background: var(--white);
 }
 
+.notice-week[hidden] {
+	display: none;
+}
+
 .notice-week.is-current {
 	flex-basis: 100%;
 	padding: 40px;

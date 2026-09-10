@@ -100,6 +100,7 @@ function updateNotices() {
 		const time = notice.querySelector("[data-notice-time]");
 
 		notice.classList.toggle("is-current", isCurrent);
+		notice.hidden = index > 4;
 		notice.querySelector("[data-notice-tag]").textContent = isCurrent ? "Aviso da semana" : "Arquivo";
 		time.dateTime = notice.dataset.noticeDate;
 		time.textContent = noticeDateFormat.format(new Date(year, month - 1, day));
