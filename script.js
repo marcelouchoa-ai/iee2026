@@ -80,7 +80,9 @@ function sortPlansByMostRecent() {
 }
 
 function updateActiveModule(now = new Date()) {
-	const modules = Array.from(document.querySelectorAll("[data-module-date]"));
+	// Os planos são reordenados do mês mais recente para o mais antigo, então a ordem do DOM não é cronológica.
+	const modules = Array.from(document.querySelectorAll("[data-module-date]"))
+		.sort((a, b) => a.dataset.moduleDate.localeCompare(b.dataset.moduleDate));
 	const today = new Date(now.getFullYear(), now.getMonth(), now.getDate());
 	const alreadyHeld = modules.filter((module) => new Date(`${module.dataset.moduleDate}T00:00:00`) <= today);
 	const focused = alreadyHeld.at(-1) ?? modules[0];
