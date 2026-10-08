@@ -138,19 +138,26 @@ menuButton.addEventListener("click", () => {
 
 mainNav.querySelectorAll("a").forEach((link) => link.addEventListener("click", closeMenu));
 
+function updateResourceVisibility(now = new Date()) {
+	const selectedFilter = document.querySelector(".resource-tabs button.active")?.dataset.filter ?? "all";
+
+	document.querySelectorAll(".resource-item").forEach((item) => {
+		const releaseAt = item.dataset.releaseAt;
+		const isReleased = !releaseAt || now >= new Date(releaseAt);
+		const matchesFilter = selectedFilter === "all" || item.dataset.category === selectedFilter;
+		item.hidden = !isReleased || !matchesFilter;
+	});
+}
+
 document.querySelectorAll(".resource-tabs button").forEach((button) => {
 	button.addEventListener("click", () => {
-		const filter = button.dataset.filter;
-
 		document.querySelectorAll(".resource-tabs button").forEach((tab) => {
 			const isSelected = tab === button;
 			tab.classList.toggle("active", isSelected);
 			tab.setAttribute("aria-selected", String(isSelected));
 		});
 
-		document.querySelectorAll(".resource-item").forEach((item) => {
-			item.hidden = filter !== "all" && item.dataset.category !== filter;
-		});
+		updateResourceVisibility();
 	});
 });
 
@@ -188,10 +195,12 @@ updateModuleStatus();
 sortPlansByMostRecent();
 updateActiveModule();
 updateNotices();
+updateResourceVisibility();
 window.setInterval(() => {
 	updateNextMeeting();
 	updateCalendarInvite();
 	updateActiveModule();
+	updateResourceVisibility();
 }, 30_000);
 document.querySelector("#current-year").textContent = new Date().getFullYear();
 window.lucide?.createIcons();
