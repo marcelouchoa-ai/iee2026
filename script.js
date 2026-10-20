@@ -203,4 +203,6 @@ window.setInterval(() => {
 	updateResourceVisibility();
 }, 30_000);
 document.querySelector("#current-year").textContent = new Date().getFullYear();
+// A versão do cabeçalho acompanha a do rodapé, então só o rodapé precisa ser editado a cada build.
+document.querySelector("[data-header-build]").textContent = `(${document.querySelector(".build-version").textContent})`;
 window.lucide?.createIcons();
