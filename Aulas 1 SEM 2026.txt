@@ -23,11 +23,13 @@ data	 aula 	  Conteúdo Programático
 1-out.	9 	8 - Princípio Vital:  Seres Orgânicos e Inorgânicos - A Vida e a Morte - Inteligência e Instinto		
 
 MÓDULO 3: OS  ESPÍRITOS, EXISTÊNCIA E SOBREVIVÊNCIA							
-data	 aula 	 Conteúdo Programático 			Bibliografia Específica de Referência	Monitor Responsável	
-8-out.	10 	9 - Origem, Natureza e Existência dos Espíritos - Forma e Ubiquidade dos Espíritos - Provas da Existência dos Espíritos			LE 2º: Cap.I - ESDE T I Mod.IV	Diego	
-15-out.	11 	10 - Natureza, Propriedades e Qualidades dos Fluidos + Perispírito: Formação, Propriedades e Funções - Ação dos Espíritos sobre os Fluidos			A Genese, cap. XIV - ESDE - T ÚNICO - Mód. II. + A Gênese, cap.XIV itens 13 a 21 + LE 2 Cap.I	Marcelo	
-22-out.	12 	11 - A Vida Futura - Progressão dos Espíritos - Diferentes Ordens de Espíritos - Escala Espírita Faixas Espirituais da Terra - Ocupações e Missões dos Espíritos			LE 2º: Cap.I - ESDE T I Mod.IV - NEv 1ª	Priscila	
-29-out.	13 	12 - Pluralidade dos Mundos - Há Muitas Moradas na Casa de Meu Pai - Mundos Inferiores e Superiores - Destino da Terra - Mundos Espirituais Transitórios			ESE: Cap.III - ESDE T I Mod VII - NEv 1ª + LE 1CAp.III	Diego	* Viagem Marcelo e Pri
-5-nov.	14 	13 - Ninguém pode ver o Reino de Deus, se não nascer de novo - Encarnação dos Espíritos: Fundamentos e Finalidade - Materialismo			ESE Cap IV - NEv 1ª P - LE2ª Cap II - ESDE 1: Mod VI	Diego	* Viagem Marcelo e Pri
+data	 aula 	 Conteúdo Programático 			Bibliografia Específica de Referência	Monitor Responsável
+	
+8-out.	10 	9 - Origem, Natureza e Existência dos Espíritos - Forma e Ubiquidade dos Espíritos - Provas da Existência dos Espíritos			LE 2º: Cap.I - ESDE T I Mod.IV	Diego	
+15-out.	11 	10 - Natureza, Propriedades e Qualidades dos Fluidos + Perispírito: Formação, Propriedades e Funções - Ação dos Espíritos sobre os Fluidos			A Genese, cap. XIV - ESDE - T ÚNICO - Mód. II. + A Gênese, cap.XIV itens 13 a 21 + LE 2 Cap.I	Marcelo	
+22-out.	12 	11 - A Vida Futura - Progressão dos Espíritos - Diferentes Ordens de Espíritos - Escala Espírita Faixas Espirituais da Terra - Ocupações e Missões dos Espíritos			LE 2º: Cap.I - ESDE T I Mod.IV - NEv 1ª	Priscila	
+29-out.	13 	12 - Pluralidade dos Mundos - Há Muitas Moradas na Casa de Meu Pai - Mundos Inferiores e Superiores - Destino da Terra - Mundos Espirituais Transitórios			ESE: Cap.III - ESDE T I Mod VII - NEv 1ª + LE 1CAp.III	Diego	* Viagem Marcelo e Pri
+5-nov.	14 	13 - Ninguém pode ver o Reino de Deus, se não nascer de novo - Encarnação dos Espíritos: Fundamentos e Finalidade - Materialismo			ESE Cap IV - NEv 1ª P - LE2ª Cap II - ESDE 1: Mod VI	Diego	* Viagem Marcelo e Pri
 12-nov.	15 	14 - Milagres ou Fenômenos? Fé e ação, Fé Raciocinada - Orientações para Leitura de Férias:  O Que é o Espiritismo - Allan Kardec			ESE Cap. XIX e a Genese, Cap. XIII	Marcelo	
+
 19-nov.	16 	14' - Encerramento do Semstre, Comentários e esclarecimentos para Fixação conteúdo. Atividade de Confraternização. 			Leitura de Férias: O Que é o Espiritismo (Allan Kardec)	Pri, Marcelo e Diego	
